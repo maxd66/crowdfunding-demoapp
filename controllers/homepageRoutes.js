@@ -1,6 +1,6 @@
 // // It's done when the / homepage route renders a list of all projects from the database.
 const router = require("express").Router();
-const Project = require('../models/Project');
+const User = require('../models/User');
 
 router.get("/", async (req, res) => {
   res.render("homepage", {});
@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 
 router.get("/project/:id", async (req, res) => {
     try {
-        const projectData = await Project.findByPk(req.params.id);
+        const projectData = await User.findByPk(req.params.id);
         console.log(projectData);
         res.render('project', projectData);
       } catch (err) {
