@@ -1,5 +1,21 @@
 {{!-- Will take project objects as data --}}
+{{#each projects as |project|}}
 <div class="card text-center">
+  <div class="card-header">
+    Featured
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{project.name}}</h5>
+    <p class="card-text">{{project.description}}</p>
+    <p class="card-text">{{project.needed_funding}}</p>
+    <a href="#" class="btn btn-primary">Fund It</a>
+      <div class="card-footer text-muted">
+    Date Created: Date 
+  </div>
+  </div>
+</div>
+{{/each}}
+{{!-- <div class="card text-center">
   <div class="card-header">
     Featured
   </div>
@@ -40,4 +56,4 @@
     <div class="card-footer text-muted">
     Date Created: Date
   </div>
-</div>
+</div> --}}
