@@ -12,10 +12,16 @@
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <div class="navbar-nav">
-    <a class="nav-link active" href="#">Login</a>
-  </div>
+  {{#if logged_in}}
+    <nav>
+      <button class='btn' id='logout'>logout</button>
+    </nav>
+  {{/if}}
 </nav>
 {{{body}}}
+
+ {{#if logged_in}}
+   <script src='/js/logout.js'></script>
+ {{/if}
 </body>
 </html>
