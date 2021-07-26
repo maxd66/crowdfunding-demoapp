@@ -12,7 +12,12 @@
   </button>
   {{#if logged_in}}
     <nav>
-      <button class='btn' id='logout'>logout</button>
+      <button class='btn' id='logout'>Logout</button>
+    </nav>
+  {{/if}}
+  {{#if logged_out}}
+    <nav>
+      <button class='btn' id='logout'>Login</button>
     </nav>
   {{/if}}
 </nav>
